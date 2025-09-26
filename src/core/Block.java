@@ -13,8 +13,8 @@ public class Block {
         this.previousHash = previousHash;
         this.nonce = "0";
         this.transactions = transactions;
-        this.hash = mineBlock(1);
         this.timestamp = System.currentTimeMillis();
+        this.hash = mineBlock(1);
     }
 
     public String calculateHash() {
@@ -41,7 +41,7 @@ public class Block {
             nonce = Integer.toString(newNonce);
             hash = calculateHash();
         }
-        this.nonce = nonce;
+  
         return hash;
     }
 
